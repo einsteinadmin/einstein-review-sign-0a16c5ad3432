@@ -34,6 +34,8 @@ header.page p.lede b { color:var(--navy-500); }
 .demoface { opacity:0; transition:opacity .25s; }
 .proto.showface .demoface { opacity:1; }
 .togglebtn { margin:14px 0 10px; border:2px solid var(--blue-500); background:#fff; color:var(--blue-500); font-family:inherit; font-weight:700; font-size:13px; letter-spacing:.5px; border-radius:22px; padding:8px 18px; cursor:pointer; }
+.artimg { width:100%; border-radius:10px; display:block; }
+.artnote { font-size:11.5px; color:var(--grey-700); margin:8px 0 10px; line-height:1.4; }
 .proto.showface .togglebtn { background:var(--blue-500); color:#fff; }
 .meta { padding:20px 24px 24px; border-top:1px solid var(--navy-100); }
 .meta h2 { font-size:18px; font-weight:700; display:flex; align-items:baseline; gap:8px; }
@@ -62,7 +64,7 @@ footer { margin-top:48px; color:var(--navy-400); font-size:12.5px; text-align:ce
 <header class="page">
   <div class="kicker">Fair Cutout v2 · Die-Cut Exploration — Nothing Prints Yet</div>
   <h1>Fair Cutout v2 options — pick one</h1>
-  <p class="lede">Paul's catch, Cameron confirmed: on the current W1, the mustache sits <b>inside/below the face hole</b> — cut that hole and the 'stache lands under the customer's chin instead of on their face. All three options below re-draw the cut so the <b>mustache stays attached to the board and reads as part of the customer's face</b>: forehead + eyes show above it, mouth + chin below it (or the lower face goes printed). Single-person cutout only — couples grab two signs. Toggle the <b>face demo</b> on each card to see how a real face maps to the openings.</p>
+  <p class="lede">Paul's catch, Cameron confirmed: on the current W1, the mustache sits <b>inside/below the face hole</b> — cut that hole and the 'stache lands under the customer's chin instead of on their face. All three options below re-draw the cut so the <b>mustache stays attached to the board and reads as part of the customer's face</b>: forehead + eyes show above it, mouth + chin below it (or the lower face goes printed). Single-person cutout only — couples grab two signs. The <b>'Stache Frame and Bandit cards show real art</b> built from the original illustration; the Bridge is the print-shop fallback and stays a geometry diagram (final art only gets drawn if it wins).</p>
 </header>
 
 <div class="problem"><b>Sizing math baked into every option:</b> average adult face is ~4.5&ndash;5" eye-line to chin and ~6&ndash;7" wide, so the mustache bridge sits ~2&ndash;3" below the eye opening's center and every bridge is <b>&ge;1.4" of solid 4mm coroplast</b> (no slivers, nothing to snap). Magenta dashed lines = die-cut paths, same marker convention as the current W1 file. The existing W1 design + PDF are untouched.</div>
@@ -135,53 +137,8 @@ footer { margin-top:48px; color:var(--navy-400); font-size:12.5px; text-align:ce
   <div class="proto rec" id="optB">
     <div class="recband">&#11088; ALBERT'S REC — BEST ILLUSION</div>
     <div class="stage">
-      <svg viewBox="0 0 360 480" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <clipPath id="holesB">
-            <ellipse cx="180" cy="196" rx="80" ry="70"/>
-          </clipPath>
-        </defs>
-        <rect x="0" y="0" width="360" height="480" fill="#27343D"/>
-        <!-- hair -->
-        <g fill="#F5EEDF">
-          <path d="M180,28 C130,22 92,44 72,78 C40,92 28,132 40,168 C30,204 48,244 84,258 C110,286 158,296 180,288 C202,296 250,286 276,258 C312,244 330,204 320,168 C332,132 320,92 288,78 C268,44 230,22 180,28 Z"/>
-          <path d="M70,90 C50,72 46,50 58,34 C66,52 80,62 96,64 Z"/>
-          <path d="M290,90 C310,72 314,50 302,34 C294,52 280,62 264,64 Z"/>
-          <path d="M40,180 C18,176 6,160 8,142 C20,154 34,158 48,154 Z"/>
-          <path d="M320,180 C342,176 354,160 352,142 C340,154 326,158 312,154 Z"/>
-          <path d="M84,262 C68,278 46,282 30,272 C46,266 56,254 58,240 Z"/>
-          <path d="M276,262 C292,278 314,282 330,272 C314,266 304,254 302,240 Z"/>
-        </g>
-        <ellipse cx="180" cy="196" rx="100" ry="92" fill="#27343D"/>
-        <!-- one big oval hole -->
-        <ellipse cx="180" cy="196" rx="80" ry="70" fill="#111A20"/>
-        <!-- demo face, visible through the whole oval (mustache bridge overlaps it after) -->
-        <g class="demoface" clip-path="url(#holesB)">
-          <ellipse cx="180" cy="206" rx="64" ry="84" fill="#E8B98F"/>
-          <ellipse cx="156" cy="176" rx="7" ry="8" fill="#27343D"/>
-          <ellipse cx="204" cy="176" rx="7" ry="8" fill="#27343D"/>
-          <path d="M145,160 Q156,154 167,159" stroke="#5A4632" stroke-width="4" fill="none" stroke-linecap="round"/>
-          <path d="M193,159 Q204,154 215,160" stroke="#5A4632" stroke-width="4" fill="none" stroke-linecap="round"/>
-          <path d="M176,176 Q173,192 178,202" stroke="#D19A6B" stroke-width="4" fill="none" stroke-linecap="round"/>
-          <path d="M160,246 Q180,262 200,246" stroke="#9C5A3C" stroke-width="5" fill="none" stroke-linecap="round"/>
-        </g>
-        <!-- the mustache IS the bridge: solid material spanning the oval, anchored to the rim both sides -->
-        <path d="M104,212 C118,206 138,200 158,203 C168,205 174,208 180,211 C186,208 192,205 202,203 C222,200 242,206 256,212 C258,224 252,236 238,240 C220,245 198,238 180,234 C162,238 140,245 122,240 C108,236 102,224 104,212 Z" fill="#F5EEDF"/>
-        <!-- cut lines: oval perimeter + both edges of the mustache bridge -->
-        <g fill="none" stroke="#E0218A" stroke-width="2.5" stroke-dasharray="7 5">
-          <path d="M104,213 C112,158 140,126 180,126 C220,126 248,158 256,213"/>
-          <path d="M104,213 C110,242 140,266 180,266 C220,266 250,242 256,213"/>
-          <path d="M104,212 C118,206 138,200 158,203 C168,205 174,208 180,211 C186,208 192,205 202,203 C222,200 242,206 256,212"/>
-          <path d="M104,212 C102,224 108,236 122,240 C140,245 162,238 180,234 C198,238 220,245 238,240 C252,236 258,224 256,212"/>
-        </g>
-        <!-- copy -->
-        <g text-anchor="middle">
-          <text x="180" y="342" font-family="Thirsty Script" font-size="30" fill="#EF8B22" transform="rotate(-2 180 342)">I made</text>
-          <text x="180" y="376" font-family="Roboto" font-weight="700" font-size="29" letter-spacing="-0.5" fill="#FFFFFF">THE SMART MOVE.</text>
-        </g>
-        <image href="art/logo-white.svg" x="130" y="404" width="100" height="52"/>
-      </svg>
-      <button class="togglebtn" onclick="this.closest('.proto').classList.toggle('showface')">&#128100; Toggle face demo</button>
+      <img class="artimg" src="art/fair-cutout-stache-frame.png" alt="Stache Frame — mustache bridges the oval, real art">
+      <div class="artnote">Real art (generated from the original illustration): the mustache crosses the oval and its wings merge into the hair on both sides — the bridge anchors through the hair region, structurally stronger than a rim-only anchor. Everything inside the ring above/below the mustache gets cut out; the sign copy + logo sit below as on the current W1.</div>
     </div>
     <div class="meta">
       <h2><span class="num">V2-B</span> The 'Stache Frame</h2>
@@ -195,49 +152,8 @@ footer { margin-top:48px; color:var(--navy-400); font-size:12.5px; text-align:ce
   <!-- OPTION C: THE BANDIT -->
   <div class="proto" id="optC">
     <div class="stage">
-      <svg viewBox="0 0 360 480" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <clipPath id="holesC">
-            <ellipse cx="180" cy="170" rx="70" ry="42"/>
-          </clipPath>
-        </defs>
-        <rect x="0" y="0" width="360" height="480" fill="#27343D"/>
-        <!-- hair -->
-        <g fill="#F5EEDF">
-          <path d="M180,28 C130,22 92,44 72,78 C40,92 28,132 40,168 C30,204 48,244 84,258 C110,286 158,296 180,288 C202,296 250,286 276,258 C312,244 330,204 320,168 C332,132 320,92 288,78 C268,44 230,22 180,28 Z"/>
-          <path d="M70,90 C50,72 46,50 58,34 C66,52 80,62 96,64 Z"/>
-          <path d="M290,90 C310,72 314,50 302,34 C294,52 280,62 264,64 Z"/>
-          <path d="M40,180 C18,176 6,160 8,142 C20,154 34,158 48,154 Z"/>
-          <path d="M320,180 C342,176 354,160 352,142 C340,154 326,158 312,154 Z"/>
-          <path d="M84,262 C68,278 46,282 30,272 C46,266 56,254 58,240 Z"/>
-          <path d="M276,262 C292,278 314,282 330,272 C314,266 304,254 302,240 Z"/>
-        </g>
-        <ellipse cx="180" cy="196" rx="100" ry="96" fill="#27343D"/>
-        <!-- single upper-face hole -->
-        <ellipse cx="180" cy="170" rx="70" ry="42" fill="#111A20"/>
-        <!-- demo face: only eyes/forehead show -->
-        <g class="demoface" clip-path="url(#holesC)">
-          <ellipse cx="180" cy="204" rx="62" ry="82" fill="#E8B98F"/>
-          <ellipse cx="156" cy="170" rx="7" ry="8" fill="#27343D"/>
-          <ellipse cx="204" cy="170" rx="7" ry="8" fill="#27343D"/>
-          <path d="M145,154 Q156,148 167,153" stroke="#5A4632" stroke-width="4" fill="none" stroke-linecap="round"/>
-          <path d="M193,153 Q204,148 215,154" stroke="#5A4632" stroke-width="4" fill="none" stroke-linecap="round"/>
-          <path d="M176,170 Q173,188 178,200" stroke="#D19A6B" stroke-width="4" fill="none" stroke-linecap="round"/>
-        </g>
-        <!-- oversized printed mustache directly below the hole -->
-        <path d="M180,220 C198,210 226,208 246,216 C262,222 274,219 288,210 C286,232 270,246 248,248 C224,250 198,240 180,246 C162,240 136,250 112,248 C90,246 74,232 72,210 C86,219 98,222 114,216 C134,208 162,210 180,220 Z" fill="#F5EEDF"/>
-        <!-- printed grin below the mustache, so the joke finishes even though the real chin is hidden -->
-        <path d="M150,266 Q180,284 210,266" stroke="#F5EEDF" stroke-width="6" fill="none" stroke-linecap="round"/>
-        <!-- cut line -->
-        <ellipse cx="180" cy="170" rx="70" ry="42" fill="none" stroke="#E0218A" stroke-width="2.5" stroke-dasharray="7 5"/>
-        <!-- copy -->
-        <g text-anchor="middle">
-          <text x="180" y="342" font-family="Thirsty Script" font-size="30" fill="#EF8B22" transform="rotate(-2 180 342)">I made</text>
-          <text x="180" y="376" font-family="Roboto" font-weight="700" font-size="29" letter-spacing="-0.5" fill="#FFFFFF">THE SMART MOVE.</text>
-        </g>
-        <image href="art/logo-white.svg" x="130" y="404" width="100" height="52"/>
-      </svg>
-      <button class="togglebtn" onclick="this.closest('.proto').classList.toggle('showface')">&#128100; Toggle face demo</button>
+      <img class="artimg" src="art/fair-cutout-bandit.png" alt="Bandit — eyes-only window, printed mustache + grin, real art">
+      <div class="artnote">Real art (generated from the original illustration): the wider, shorter ring frames eyes + forehead only; mustache and grin are printed on solid board below the rim. Only the inside of the ring gets cut; sign copy + logo sit below as on the current W1.</div>
     </div>
     <div class="meta">
       <h2><span class="num">V2-C</span> The Bandit</h2>
@@ -256,7 +172,7 @@ footer { margin-top:48px; color:var(--navy-400); font-size:12.5px; text-align:ce
     <li><b>V2-B ('Stache Frame) is the recommendation:</b> it's the only option where the mustache sits ON the customer's face with skin visible all around it — the photo everyone actually wants. The bridge spec keeps it structurally boring.</li>
     <li><b>V2-A (Bridge)</b> is the fallback if the print shop balks at a shaped die — same idea, straight band, cannot fail.</li>
     <li><b>V2-C (Bandit)</b> is the budget/durability pick — one cut, works for kids and adults alike, but hides the customer's real smile.</li>
-    <li><b>Whichever wins:</b> regenerate at print size with the final illustrated art (these mockups are geometry studies, not final art), keep the magenta = cut-marker convention on the file sent to the shop, and consider 24&times;36" for this design — faces fit easier.</li>
+    <li><b>Whichever wins:</b> regenerate at print size (the 'Stache Frame + Bandit art is real but web-resolution; the Bridge would need its art drawn), keep the magenta = cut-marker convention on the file sent to the shop, and consider 24&times;36" for this design — faces fit easier.</li>
   </ul>
 </section>
 

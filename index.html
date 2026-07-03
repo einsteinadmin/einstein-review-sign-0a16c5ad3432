@@ -71,6 +71,13 @@ section.notes { margin-top:52px; display:grid; grid-template-columns:repeat(auto
 .card li::before { content:''; position:absolute; left:2px; top:13px; width:10px; height:10px; border-radius:50%; background:var(--orange-500); }
 .card li b { color:var(--navy-500); }
 .card.warn li::before { background:var(--blue-500); }
+.cutopts { display:flex; gap:8px; margin-top:14px; }
+.cutopt { flex:1; min-width:0; text-align:center; }
+.cutopt img { width:100%; border-radius:8px; display:block; background:var(--navy-500); }
+.cutopt.pick img { outline:3px solid var(--orange-500); }
+.cutopt span { font-size:11px; color:var(--grey-700); line-height:1.35; display:block; margin-top:5px; font-weight:600; }
+.cutopts-note { font-size:12px; margin-top:8px; color:var(--grey-700); }
+.cutopts-note a { color:var(--blue-500); font-weight:700; }
 footer { margin-top:48px; color:var(--navy-400); font-size:12.5px; text-align:center; }
 </style>
 </head>
@@ -212,7 +219,13 @@ footer { margin-top:48px; color:var(--navy-400); font-size:12.5px; text-align:ce
     </div>
     <div class="meta">
       <h2><span class="num">W1</span> The Fair Cutout</h2>
-      <p>Cameron's ask: the carnival face-hole. The customer's face completes the joke — every photo is a different person being Einstein. Kids will fight over it. Final art v2 (7/2): the mustache attaches directly to the hole's edge, so it sits under the face of whoever's looking through — no floating-mustache gap. Print: die-cut along the OUTER edge of the magenta ring (the ring is removed entirely, leaving an ~8×10" oval face hole bordered by hair + mustache). Works at 18×24, even better at 24×36.</p>
+      <p>Cameron's ask: the carnival face-hole. The customer's face completes the joke — every photo is a different person being Einstein. Kids will fight over it. Print: die-cut along the OUTER edge of the magenta ring. <b>One open question before print — where the mustache goes</b> (Paul's catch: cut the current hole and the 'stache lands under the customer's chin). The cut options, side by side:</p>
+      <div class="cutopts">
+        <div class="cutopt"><img src="art/einstein-cutout-thumb.png" alt="Current cut — mustache below the hole"><span>Current — 'stache lands below the chin ⚠</span></div>
+        <div class="cutopt pick"><img src="art/fair-cutout-stache-frame.png" alt="Stache Frame option"><span>⭐ 'Stache Frame — mustache bridges the hole, sits ON the face</span></div>
+        <div class="cutopt"><img src="art/fair-cutout-bandit.png" alt="Bandit option"><span>Bandit — eyes-only window, 'stache + grin printed</span></div>
+      </div>
+      <div class="cutopts-note">Single-person cutout only (couples grab two signs). <a href="fair-cutout-v2.html">Cut specs + the straight-band fallback →</a></div>
       <span class="tag">CAMERON'S ASK</span><span class="tag">DIE-CUT HOLE</span><span class="tag">KID MAGNET</span>
     </div>
   </div>
@@ -298,21 +311,6 @@ footer { margin-top:48px; color:var(--navy-400); font-size:12.5px; text-align:ce
   </div>
 
 </div>
-
-<div class="secthead" id="cutout-v2">
-  <h2>Fair Cutout <span>v2 options</span> — pick one</h2>
-  <p>Paul's catch, Cameron confirmed: on the current W1, the mustache sits <b>inside/below the face hole</b> — cut it and the 'stache lands under the customer's chin instead of on their face. Three new cut geometries keep the mustache <b>attached to the board</b> so it reads as part of the customer's face (single-person only; couples grab two signs). The W1 design + PDF above are untouched — nothing prints until one of these wins.</p>
-</div>
-<section class="dl">
-  <h3><span>Fair Cutout v2</span> — three cut geometries, with face demos</h3>
-  <div class="sub">Full mockups + toggleable face-placement demos + per-option cut specs and print-feasibility notes live on their own page.</div>
-  <div class="dl-grid">
-    <a class="dl-item" href="fair-cutout-v2.html#optA"><span class="pdfmark" style="background:var(--orange-900);">V2-A</span>The Bridge — two windows, mustache band</a>
-    <a class="dl-item star" href="fair-cutout-v2.html#optB"><span class="pdfmark" style="background:var(--orange-900);">V2-B</span>The 'Stache Frame — mustache IS the cut ⭐ rec</a>
-    <a class="dl-item" href="fair-cutout-v2.html#optC"><span class="pdfmark" style="background:var(--orange-900);">V2-C</span>The Bandit — eyes-only window, printed grin</a>
-  </div>
-  <div class="spec"><b>Open the comparison:</b> <a href="fair-cutout-v2.html" style="color:var(--blue-500); font-weight:700;">fair-cutout-v2.html →</a> — each option has a &#128100; face-demo toggle showing exactly what shows through the openings, sized to a real adult face (~4.5&ndash;5" eye-line to chin), every bridge &ge;1.4" of solid coroplast.</div>
-</section>
 
 <section class="dl">
   <h3><span>Print-ready files</span> — download &amp; send to any sign shop</h3>
